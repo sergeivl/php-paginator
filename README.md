@@ -1,4 +1,4 @@
-PHP Paginator
+PHP Paginator (Adapted for twitter Bootstrap 4)
 =============
 
 [![Build Status](https://travis-ci.org/jasongrimes/php-paginator.svg?branch=master)](https://travis-ci.org/jasongrimes/php-paginator)
@@ -11,7 +11,7 @@ A lightweight PHP paginator, for generating pagination controls in the style of 
 
 These examples show how the paginator handles overflow when there are a lot of pages.
 They're rendered using the sample templates provided in the [examples](examples/) directory,
-which depend on Twitter Bootstrap. 
+which depend on Twitter Bootstrap 4. 
 You can easily use your own custom HTML to render the pagination control instead.
 
 Default template:
@@ -58,7 +58,7 @@ Here's a quick example using the defaults:
     <html>
       <head>
         <!-- The default, built-in template supports the Twitter Bootstrap pagination styles. -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       </head>
       <body>
 
@@ -76,22 +76,14 @@ This will output the following:
 
 <img src="examples/screenshot-default-mid.png" width="597">
 
-    <ul class="pagination">
-      <li><a href="/foo/page/7">&laquo; Previous</a></li>
-      <li><a href="/foo/page/1">1</a></li>
-      <li class="disabled"><span>...</span></li>
-      <li><a href="/foo/page/5">5</a></li>
-      <li><a href="/foo/page/6">6</a></li>
-      <li><a href="/foo/page/7">7</a></li>
-      <li class="active"><a href="/foo/page/8">8</a></li>
-      <li><a href="/foo/page/9">9</a></li>
-      <li><a href="/foo/page/10">10</a></li>
-      <li><a href="/foo/page/11">11</a></li>
-      <li><a href="/foo/page/12">12</a></li>
-      <li class="disabled"><span>...</span></li>
-      <li><a href="/foo/page/20">20</a></li>
-      <li><a href="/foo/page/9">Next &raquo;</a></li>
-    </ul>
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Предыдущая</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Следующая</a></li>
+  </ul>
+
     
 To render it with one of the other example templates, just make sure the variable is named `$paginator` and then include the template file:
 
